@@ -1,12 +1,9 @@
 import { techStack } from "../data";
+import Separate from "../separate/Separate";
 
 function TechStack () {
     return <section className="mb-12">
-            <h2 className="text-2xl lg:text-3xl font-semibold text-gray-800 mb-6 pb-2 border-b-4 border-[#667eea] relative">
-              Tech Stack & Expertise
-              <div className="absolute bottom-0 left-0 w-12 h-1 bg-gradient-to-r from-[#f093fb] to-[#f5576c] -mb-1"></div>
-            </h2>
-            
+            <Separate title="Tech Stack & Expertise"/>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
               {Object.entries(techStack).map(([category, data]) => (
                 <div 

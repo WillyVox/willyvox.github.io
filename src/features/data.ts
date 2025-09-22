@@ -80,34 +80,47 @@ export const projects = [
   ];
 
 export const techStack: Record<string, ITechStackCategory> = {
+  "Software Architectural Pattern": {
+        icon: "⚙️",
+        color: "fuchsia",
+        technologies: ['Microservices', 'AI-driven Development', 'RESTful APIs', ]
+      },
+      Backend: {
+        icon: "🤖",
+        color: "red",
+        technologies: ['Node.js', 'ExpressJS', '.NET', 'C#', 'Java Spring']
+      },
       Frontend: {
         icon: "🎨",
         color: "blue",
         technologies: ['React', 'Redux', 'JavaScript', 'TypeScript', 'Tailwind', 'HTML/CSS']
       },
-      Backend: {
-        icon: "⚙️",
-        color: "indigo",
-        technologies: ['Node.js', 'ExpressJS', '.NET', 'C#', 'Java Spring', 'Web API', 'Microservices']
+      "API Getway & Cloud": {
+        icon: "☁️",
+        color: "purple",
+        technologies: ['Service Bus','MongoDB', 'SQL Server', 'AWS', 'Google Cloud', 'Firebase',  'Apache Kafka']
       },
       "Database & Cloud": {
         icon: "☁️",
         color: "purple",
-        technologies: ['MongoDB', 'SQL Server', 'AWS', 'Google Cloud', 'Firebase']
+        technologies: ['Service Bus','MongoDB', 'SQL Server', 'AWS', 'Google Cloud', 'Firebase',  'Apache Kafka']
       },
       "DevOps & Tools": {
         icon: "🛠️",
         color: "violet",
-        technologies: ['Docker', 'CI/CD', 'Git', 'Jenkins', 'Selenium', 'Apache Kafka']
+        technologies: ['Docker', 'CI/CD', 'Jenkins', 'Gitflow', 'Selenium']
       },
       "Project Management": {
         icon: "📋",
         color: "pink",
-        technologies: ['Jira', 'Confluence', 'Agile', 'Scrum', 'Service Bus']
+        technologies: ['Jira', 'Confluence', 'Agile', 'Scrum', ]
       },
-      "Modern Development": {
-        icon: "🤖",
-        color: "fuchsia",
-        technologies: ['AI-driven Development', 'RESTful APIs', 'GraphQL', 'Protocol Buffers']
-      }
-    };
+};
+
+export const summary = {
+  first: 'Senior Software Engineer specializing in full-stack development with deep expertise spanning React, TypeScript, .NET, Java Spring, and modern cloud architectures. Successfully delivered enterprise-grade applications for aviation, fintech, and e-commerce domains, consistently improving system performance and developer productivity.',
+  second: 'Recognized for building scalable microservices architectures, implementing CI/CD pipelines, containerizing with Docker, automated testing flows such as TDD, BDD, and AI-driven development workflows. Passionate about mentoring engineering teams, driving technical excellence, and leveraging cutting-edge technologies to deliver exceptional user experiences and business value.',
+  third: 'Actively contributes to the software community through open-source projects and stays at the forefront of emerging technologies including AI-assisted development practices.'
+}
+
+
