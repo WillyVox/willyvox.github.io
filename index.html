@@ -1,0 +1,571 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Senior Software Engineer</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .cv-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .cv-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb, #f5576c);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 3rem 2.5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 2px,
+                rgba(255,255,255,0.03) 2px,
+                rgba(255,255,255,0.03) 4px
+            );
+            animation: float 20s linear infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .name {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .title {
+            font-size: 1.4rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            font-size: 0.95rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+        }
+
+        .content {
+            padding: 2.5rem;
+        }
+
+        .section {
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #667eea;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, #f093fb, #f5576c);
+        }
+
+        .summary {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #555;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
+            position: relative;
+        }
+
+        .summary::before {
+            content: '"';
+            font-size: 4rem;
+            color: #667eea;
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            opacity: 0.3;
+            font-family: serif;
+        }
+
+        .experience-item {
+            background: white;
+            border: 1px solid #e9ecef;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(180deg, #667eea, #764ba2);
+        }
+
+        .experience-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .job-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .company {
+            font-size: 1.1rem;
+            color: #667eea;
+            font-weight: 500;
+        }
+
+        .duration {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .achievements {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .achievements li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: #555;
+        }
+
+        .achievements li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-size: 0.8rem;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .skill-tag {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .education-item {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 1.5rem;
+            border-radius: 15px;
+            border-left: 5px solid #f5576c;
+        }
+
+        .degree {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .university {
+            color: #667eea;
+            font-weight: 500;
+            margin-bottom: 0.3rem;
+        }
+
+        .year {
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        .projects {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .project-item {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .project-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            transform: translate(30px, -30px);
+        }
+
+        .project-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
+        }
+
+        .project-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .project-description {
+            margin-bottom: 1rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+
+        .project-link {
+            color: #f8f9fa;
+            text-decoration: none;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255,255,255,0.3);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            display: inline-block;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .project-link:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+            
+            .name {
+                font-size: 2rem;
+            }
+            
+            .contact-info {
+                gap: 1rem;
+            }
+            
+            .contact-item {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.85rem;
+            }
+            
+            .content {
+                padding: 1.5rem;
+            }
+            
+            .job-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <header class="header">
+            <div class="header-content">
+                <h1 class="name">Willy Vox</h1>
+                <p class="title">Senior Software Engineer</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span>📍</span>
+                        <span>Melbourne VIC 3058</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>📱</span>
+                        <span>+61 400 171 642</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>📧</span>
+                        <span>willy.vox@outlook.com.au</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="content">
+            <section class="section">
+                <h2 class="section-title">Professional Summary</h2>
+                <div class="summary">
+                    Highly experienced Senior Software Engineer specializing in modern full-stack development with expertise in front-end technologies like React, TypeScript, JavaScript, HTML, CSS, and associated frameworks. Proficient in back-end technologies including Node.js, ExpressJS, .NET, Java Spring, PHP, Ruby on Rails, Python, microservices, AWS, Google Firebase, and RESTful API development.
+                    <br><br>
+                    Adept at architecting and developing reusable modules and components for scalable applications within Agile and Scrum environments. A collaborative team player with proven ability to mentor junior developers and translate business needs into clear technical specifications. Passionate about leveraging cutting-edge technologies to solve complex challenges and actively contributing to the software community.
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Professional Experience</h2>
+                
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Senior Software Engineer</div>
+                            <div class="company">Thales Group</div>
+                        </div>
+                        <div class="duration">June 2023 - Present</div>
+                    </div>
+                    <ul class="achievements">
+                        <li>Architected and developed aircraft simulation applications using React, Electron, TypeScript, Redux, Node.js, Tailwind, .NET, Java Spring, Selenium, Jenkins, Docker and REST APIs</li>
+                        <li>Integrated REST APIs and Protocol Buffers for seamless data exchange and enhanced application performance</li>
+                        <li>Engineered reusable modules and components, reducing development time by 20% and improving code maintainability</li>
+                        <li>Configured and deployed applications across multiple platforms, ensuring compatibility and operational reliability</li>
+                    </ul>
+                    <div class="skills-container">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Electron</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">Redux</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">.NET</span>
+                        <span class="skill-tag">Java Spring</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Jenkins</span>
+                        <span class="skill-tag">REST APIs</span>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Senior Software Engineer, Software Lead</div>
+                            <div class="company">Carro</div>
+                        </div>
+                        <div class="duration">May 2019 - June 2023</div>
+                    </div>
+                    <ul class="achievements">
+                        <li>Designed and developed financing, trading and e-commerce applications using React, Next.js, PHP, and MySQL</li>
+                        <li>Initialized modular app architectures, improving development efficiency and maintainability</li>
+                        <li>Led a team of engineers, mentoring developers and collaborating with product owners to align deliverables with business goals</li>
+                        <li>Built reusable UI components, streamlining front-end development and ensuring consistent user experiences</li>
+                        <li>Conducted code reviews to enforce quality standards and deployed applications to production environments</li>
+                    </ul>
+                    <div class="skills-container">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Next.js</span>
+                        <span class="skill-tag">Redux</span>
+                        <span class="skill-tag">Apollo GraphQL</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">PHP</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">MySQL</span>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Senior Software Developer</div>
+                            <div class="company">Allianz Technology</div>
+                        </div>
+                        <div class="duration">July 2016 - May 2019</div>
+                    </div>
+                    <ul class="achievements">
+                        <li>Developed insurance and financing applications for web and mobile platforms, enhancing user accessibility and engagement</li>
+                        <li>Designed and implemented shared components, features, and libraries, reducing redundancy and accelerating development cycles</li>
+                        <li>Integrated web applications with server-side environments, ensuring robust performance and scalability</li>
+                    </ul>
+                    <div class="skills-container">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">Redux</span>
+                        <span class="skill-tag">Angular 4</span>
+                        <span class="skill-tag">Java Spring</span>
+                        <span class="skill-tag">Google Cloud</span>
+                        <span class="skill-tag">MS SQL Server</span>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Software Engineer</div>
+                            <div class="company">Merkle Commerce Solutions</div>
+                        </div>
+                        <div class="duration">Jan 2014 - June 2016</div>
+                    </div>
+                    <ul class="achievements">
+                        <li>Built web and mobile applications using JavaScript, AngularJS, PhoneGap, Bootstrap, and jQuery</li>
+                        <li>Integrated third-party payment gateways (PayPal, NaverPay, WeChatPay), enabling secure and efficient transaction processing</li>
+                        <li>Delivered responsive and user-friendly interfaces across multiple platforms</li>
+                    </ul>
+                    <div class="skills-container">
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">EmberJS</span>
+                        <span class="skill-tag">PhoneGap</span>
+                        <span class="skill-tag">Ionic</span>
+                        <span class="skill-tag">AngularJS</span>
+                        <span class="skill-tag">jQuery</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">PHP</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Education</h2>
+                <div class="education-item">
+                    <div class="degree">Software & Science Technology</div>
+                    <div class="university">HCMC University of Technology</div>
+                    <div class="year">2009 – 2013</div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Key Projects</h2>
+                <div class="projects">
+                    <div class="project-item">
+                        <div class="project-title">ONESky Project</div>
+                        <div class="project-description">A collaborative air traffic management system for civil and military aviation.</div>
+                        <a href="https://www.thalesgroup.com/en/australia/news/thales-welcomes-onesky-milestones" class="project-link" target="_blank">View Project</a>
+                    </div>
+                    
+                    <div class="project-item">
+                        <div class="project-title">Carro Platform</div>
+                        <div class="project-description">A high-traffic e-commerce platform for buying and selling used cars and providing car services.</div>
+                        <a href="https://captain.carro.sg/" class="project-link" target="_blank">View Platform</a>
+                    </div>
+                    
+                    <div class="project-item">
+                        <div class="project-title">Allianz Motor Insurance</div>
+                        <div class="project-description">A comprehensive motor insurance platform for web and mobile.</div>
+                        <a href="https://getquote.allianz.com.my/motor-online/get-info" class="project-link" target="_blank">View Platform</a>
+                    </div>
+                    
+                    <div class="project-item">
+                        <div class="project-title">Kiehl's e-Commerce Platform</div>
+                        <div class="project-description">Full-scale e-commerce solution for the premium skincare brand.</div>
+                        <a href="https://www.kiehls.com.au/" class="project-link" target="_blank">View Platform</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
