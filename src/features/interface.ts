@@ -1,4 +1,3 @@
-
 export interface IContactInfo {
   icon: string;
   text: string;

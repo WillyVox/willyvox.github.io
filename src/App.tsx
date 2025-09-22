@@ -1,15 +1,13 @@
+import './App.css';
 
-import './App.css'
-
-import ProfessionalCV from './features/resume/Resume'
+import ProfessionalCV from './features/resume/Resume';
 
 function App() {
-
   return (
     <>
-    <ProfessionalCV/>
-      </>
-  )
+      <ProfessionalCV />
+    </>
+  );
 }
 
-export default App
+export default App;

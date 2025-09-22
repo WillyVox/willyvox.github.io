@@ -1,13 +1,15 @@
-import type { FC } from "react";
+import type { FC } from 'react';
 
 type Props = {
-    title: string;
-}
-const Separate: FC<Props> = ({title}) => {
-    return <h2 className="text-2xl lg:text-3xl font-semibold text-gray-800 mb-6 pb-2 border-b-4 border-[#34495e] relative">
-        {title}
-        <div className="absolute bottom-0 left-0 w-12 h-1 bg-gradient-to-r from-[#2c3e50] to-[#34495e] -mb-1"></div>
+  title: string;
+};
+const Separate: FC<Props> = ({ title }) => {
+  return (
+    <h2 className="relative mb-6 border-b-4 border-[#34495e] pb-2 text-2xl font-semibold text-gray-800 lg:text-3xl">
+      {title}
+      <div className="absolute bottom-0 left-0 -mb-1 h-1 w-12 bg-gradient-to-r from-[#2c3e50] to-[#34495e]"></div>
     </h2>
-}
+  );
+};
 
-export default Separate
+export default Separate;
