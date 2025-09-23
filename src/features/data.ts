@@ -19,11 +19,12 @@ export const experiences = [
     ],
     skills: [
       'React',
-      'Electron',
       'TypeScript',
+      'Electron',
       'Redux',
       'Node.js',
       '.NET',
+      'C#',
       'Java Spring',
       'Docker',
       'Jenkins',
@@ -42,11 +43,14 @@ export const experiences = [
       'Conducted code reviews to enforce quality standards and deployed applications to production environments',
     ],
     skills: [
+      '.NET',
+      'ASP Core',
+      'Node.js',
       'React',
-      'Next.js',
+      'Next',
       'Redux',
+      'TypeScript',
       'Apollo GraphQL',
-      'JavaScript',
       'PHP',
       'Python',
       'MySQL',
@@ -104,7 +108,7 @@ export const projects = [
     title: 'Carro Platform',
     description:
       'A high-traffic e-commerce platform for buying and selling used cars and providing car services.',
-    link: 'https://captain.carro.sg/',
+    link: 'https://carro.co/sg/en',
   },
   {
     title: 'Allianz Motor Insurance',
@@ -120,71 +124,73 @@ export const projects = [
 ];
 
 export const techStack: Record<string, ITechStackCategory> = {
-  'Software Architectural Pattern': {
+  'Software Design': {
     icon: '⚙️',
-    color: 'fuchsia',
-    technologies: ['Microservices', 'AI-driven Development', 'RESTful APIs'],
+    technologies: [
+      'Event-Driven Architecture',
+      'Microservices Architecture',
+      'MVC Model',
+      'CQRS',
+      'ACID',
+      'Event Sourcing',
+      'API Gateway Pattern',
+      'Message queue',
+    ],
   },
   Backend: {
     icon: '🤖',
-    color: 'red',
-    technologies: ['Node.js', 'ExpressJS', '.NET', 'C#', 'Java Spring'],
+    technologies: [
+      'Node.js',
+      'ExpressJS',
+      '.NET',
+      'C#',
+      'ASP',
+      'Java Spring',
+      'Python',
+      'PHP',
+    ],
   },
   Frontend: {
     icon: '🎨',
-    color: 'blue',
     technologies: [
       'React',
       'Redux',
       'JavaScript',
       'TypeScript',
       'Tailwind',
+      'StyledComponents',
       'HTML/CSS',
+      'Figma',
     ],
   },
-  'API Getway & Cloud': {
+  'Cloud & Services': {
     icon: '☁️',
-    color: 'purple',
     technologies: [
       'Service Bus',
-      'MongoDB',
-      'SQL Server',
       'AWS',
       'Google Cloud',
       'Firebase',
       'Apache Kafka',
+      'REST APIs',
     ],
   },
-  'Database & Cloud': {
-    icon: '☁️',
-    color: 'purple',
-    technologies: [
-      'Service Bus',
-      'MongoDB',
-      'SQL Server',
-      'AWS',
-      'Google Cloud',
-      'Firebase',
-      'Apache Kafka',
-    ],
+  Database: {
+    icon: '🗄️',
+    technologies: ['MongoDB', 'Microsoft SQL Server', 'Oracle', 'MySQL'],
   },
   'DevOps & Tools': {
     icon: '🛠️',
-    color: 'violet',
     technologies: ['Docker', 'CI/CD', 'Jenkins', 'Gitflow', 'Selenium'],
   },
   'Project Management': {
     icon: '📋',
-    color: 'pink',
     technologies: ['Jira', 'Confluence', 'Agile', 'Scrum'],
   },
 };
 
 export const summary = {
-  first:
-    'Senior Software Engineer specializing in full-stack development with deep expertise spanning React, TypeScript, .NET, Java Spring, and modern cloud architectures. Successfully delivered enterprise-grade applications for aviation, fintech, and e-commerce domains, consistently improving system performance and developer productivity.',
-  second:
-    'Recognized for building scalable microservices architectures, implementing CI/CD pipelines, containerizing with Docker, automated testing flows such as TDD, BDD, and AI-driven development workflows. Passionate about mentoring engineering teams, driving technical excellence, and leveraging cutting-edge technologies to deliver exceptional user experiences and business value.',
+  first: `Innovative Senior Software Engineer specializing in enterprise software architecture with expertise in microservices design & solutions, cloud services, REST APIs, and distributed systems. Proficient in .NET/C#, ASP.NET Core, React/TypeScript with advanced state management, and relational database design with ACID transaction management.`,
+  second: `Recognized for architecting scalable microservices solutions, implementing robust API gateways, and delivering high-performance applications across aviation, fintech, and e-commerce domains. Passionate about driving technical excellence through modern architectural patterns and mentoring engineering teams.`,
   third:
     'Actively contributes to the software community through open-source projects and stays at the forefront of emerging technologies including AI-assisted development practices.',
 };

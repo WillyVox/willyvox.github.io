@@ -5,7 +5,6 @@ export interface IContactInfo {
 
 export interface ITechStackCategory {
   icon: string;
-  color: string;
   technologies: string[];
 }
 

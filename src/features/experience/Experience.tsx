@@ -43,9 +43,8 @@ function Experience() {
             {exp.skills.map((skill, skillIndex) => (
               <span
                 key={skillIndex}
-                className="rounded-sm bg-gradient-to-r from-[#2c3e50] to-[#34495e] px-3 py-1 text-sm font-medium text-white transition-all duration-300 hover:shadow-md hover:shadow-[#667eea]/40"
+                className="rounded-sm bg-gradient-to-r from-[#2c3e50] to-[#34495e] px-3 py-1 text-sm font-medium text-white transition-all duration-300"
               >
-                {/* linear-gradient(135deg, #2c3e50 0%, #34495e 100%); */}
                 {skill}
               </span>
             ))}

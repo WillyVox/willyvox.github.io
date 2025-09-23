@@ -9,7 +9,7 @@ import Project from '../project/Project';
 
 const ProfessionalCV: React.FC = () => {
   return (
-    <div className="min-h-screen p-8 font-sans text-gray-800">
+    <div className="min-h-screen font-sans text-gray-800 md:p-8">
       <div className="relative mx-auto max-w-4xl overflow-hidden rounded-2xl bg-white shadow-2xl">
         {/* Header */}
         <Header />
