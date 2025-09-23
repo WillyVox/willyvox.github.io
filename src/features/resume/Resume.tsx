@@ -7,7 +7,7 @@ import Summary from '../summary/Summary';
 import Education from '../education/Education';
 import Project from '../project/Project';
 
-const ProfessionalCV: React.FC = () => {
+const Resume: React.FC = () => {
   return (
     <div className="min-h-screen font-sans text-gray-800 md:p-8">
       <div className="relative mx-auto max-w-4xl overflow-hidden rounded-2xl bg-white shadow-2xl">
@@ -36,4 +36,4 @@ const ProfessionalCV: React.FC = () => {
   );
 };
 
-export default ProfessionalCV;
+export default Resume;
