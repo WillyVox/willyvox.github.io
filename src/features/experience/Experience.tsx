@@ -1,4 +1,4 @@
-import { experiences } from '../data';
+import { experiences } from '../constants';
 import Separate from '../separate/Separate';
 
 function Experience() {

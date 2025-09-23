@@ -1,4 +1,4 @@
-import { summary } from '../data';
+import { summary } from '../constants';
 import Separate from '../separate/Separate';
 
 function Summary() {

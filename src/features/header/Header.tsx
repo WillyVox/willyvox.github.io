@@ -1,4 +1,4 @@
-import { contactInfo } from '../data';
+import { contactInfo } from '../constants';
 import './Header.css';
 
 function Header() {

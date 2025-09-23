@@ -1,4 +1,4 @@
-import { projects } from '../data';
+import { projects } from '../constants';
 import Separate from '../separate/Separate';
 
 function Project() {
