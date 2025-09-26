@@ -3,7 +3,7 @@ import Separate from '../separate/Separate';
 
 function TechStack() {
   return (
-    <section className="mb-12 techstack">
+    <section className="techstack mb-12">
       <Separate title="Tech Stack & Expertise" />
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
         {Object.entries(techStack).map(([category, data]) => (
