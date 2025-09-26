@@ -32,14 +32,6 @@ function Header() {
             </div>
           ))}
         </div>
-        {/* <a
-              href="/Willy_Vox_Resume.pdf"
-              download
-              className="mt-8 inline-block px-8 py-3 bg-gradient-to-r from-grey-400 to-grey-400 text-white rounded-full text-base font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-grey-400/40 focus:ring-2 focus:ring-grey-400 focus:outline-none"
-              aria-label="Download CV as PDF"
-            >
-              Download CV
-            </a> */}
       </div>
     </header>
   );
